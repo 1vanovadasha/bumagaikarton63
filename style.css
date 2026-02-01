@@ -1,0 +1,1503 @@
+/* Основные стили для body (всего документа) */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FFFAFA 0%, #D2B48C 100%);
+    background-attachment: fixed;
+    padding-bottom: 10px; /* Компенсация высоты для футера */
+}
+
+/* Стили для навигационной панели */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(40, 40, 40, 0.70);
+    padding: 2px 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border-bottom: 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Стили для строки с кнопками */
+.button-row {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 65px;
+    width: auto;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили для названия компании */
+.company-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    white-space: nowrap;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+/* Основные стили кнопок */
+.btn {
+/* Цвет и прозрачность */
+    background-color: rgba(40, 40, 40, 0.3); /* Темный фон с 30% прозрачностью */
+    color: white; /* Чистый белый текст */
+
+    /* Типографика */
+    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300; /* Тонкое начертание */
+    letter-spacing: 1px; /* Разреженные буквы */
+    text-transform: uppercase; /* ВЕРХНИЙ РЕГИСТР */
+
+    /* Отступы и форма */
+    padding: 14px 24px; /* Комфортные отступы */
+    border: none; /* Полное отсутствие рамки */
+    border-radius: 0; /* Квадратные углы */
+    outline: none; /* Убираем контур при фокусе */
+
+    /* Эффекты */
+    backdrop-filter: blur(8px); /* Размытие фона */
+    -webkit-backdrop-filter: blur(8px); /* Для Safari */
+    box-shadow: none; /* Нет теней */
+
+    /* Анимации */
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+
+    /* Прочее */
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased; /* Сглаживание шрифта */
+}
+
+/* Состояние при наведении */
+.btn:hover {
+    background-color: rgba(70, 70, 70, 0.4); /* Светлее на 15% */
+    transform: translateY(-3px); /* Подъем вверх */
+}
+
+/* Состояние при нажатии */
+.btn:active {
+    background-color: rgba(20, 20, 20, 0.5); /* Темнее на 15% */
+    transform: translateY(0); /* Возврат в исходное положение */
+    transition-duration: 0.1s; /* Ускоренная анимация */
+}
+
+.mail-circle-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: #333;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.mail-circle-btn:hover, .mail-circle-btn:focus {
+    background: #C0C0C0;
+    color: #333;
+}
+
+
+
+
+
+/* Стили для основного контента */
+.content {
+    padding: 32px 24px;
+    max-width: 1400px;
+    margin: 24px auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Стили для секции "О компании" */
+.about-grid {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 22px; /* Увеличен промежуток между текстом и изображениями */
+    flex-wrap: wrap;
+}
+
+.text-block {
+    flex: 1 1 58%; /* Текст занимает 58% */
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif; /* Шрифт Book Antiqua */
+}
+
+.text-block h2 {
+    margin-bottom: 20px; /* Увеличен отступ */
+    font-size: 32px; /* Увеличен размер */
+    color: #000; /* Более темный цвет */
+    letter-spacing: 0.5px; /* Добавлен межбуквенный интервал */
+}
+
+.text-block p {
+    margin-bottom: 20px; /* Увеличен отступ */
+    font-size: 18px;
+    color: #000; /* Более мягкий черный */
+    line-height: 1.6; /* Улучшенная читаемость */
+    text-align: justify; /* Выравнивание по ширине */
+    hyphens: auto; /* Перенос слов */
+}
+
+.images-grid {
+    flex: 1 1 38%; /* Изображения занимают 38% */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Теперь 1 колонка (для баланса) */
+    gap: 16px; /* Увеличен промежуток */
+    align-self: center; /* Выравнивание по вертикали */
+}
+
+.images-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Увеличен радиус скругления */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Более мягкая тень */
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.images-grid img:hover {
+    transform: scale(1.5); /* Эффект увеличения при наведении */
+}
+
+.text-block2 {
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif; /* Шрифт Book Antiqua */
+}
+
+.text-block2 h2 {
+    margin-bottom: 20px; /* Увеличен отступ */
+    font-size: 32px; /* Увеличен размер */
+    color: #000; /* Более темный цвет */
+    letter-spacing: 0.5px; /* Добавлен межбуквенный интервал */
+    text-align: center;
+}
+
+.text-block2 p {
+    font-size: 24px;
+    color: #000; /* Более мягкий черный */
+    line-height: 1.6; /* Улучшенная читаемость */
+    text-align: center; /* Выравнивание по ширине */
+    hyphens: auto; /* Перенос слов */
+}
+.highlight-word {
+    color: #008000; /* Красный оттенок для выделения */
+    font-weight: bold; /* Сделать жирным */
+}
+
+/* Сетка товаров */
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Каждый товар */
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Изображение товара */
+.product-item img {
+    width: 336px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* Кнопка под фото */
+/* Кнопка под фото */
+.product-btn {
+/* Типографика */
+    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300; /* Тонкое начертание */
+    letter-spacing: 1px; /* Разреженные буквы */
+    text-transform: uppercase; /* ВЕРХНИЙ РЕГИСТР */
+
+    /* Стиль кнопки */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Состояние при наведении */
+.product-btn:hover {
+    background-color: #C0C0C0;
+    color: #333;
+}
+
+/* Состояние при нажатии */
+.product-btn:active {
+    background-color: #808080; /* Темнее на 15% */
+}
+
+
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.modal-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.modal-img {
+    width: 300px;
+    height: 250px;
+    /*    width: 45%;*/
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.modal-text {
+    width: 64%;
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif; /* Шрифт Book Antiqua */
+}
+
+.modal-text h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #000;
+}
+
+.modal-text p {
+    font-size: 18px;
+    color: #000;
+    line-height: 1.5;
+}
+
+.modal1-full-text {
+    margin-top: 40px;
+    font-size: 18px;
+    color: #000;
+    line-height: 1.6;
+    text-align: justify;
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif; /* Шрифт Book Antiqua */
+}
+.highlight-word2 {
+    color: #FF0000; /* Красный оттенок для выделения */
+    font-weight: bold; /* Сделать жирным */
+}
+/* Контейнер с тремя столбцами */
+.modal-three-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 30px 0;
+    flex-wrap: nowrap;
+}
+.modal-to-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 30px 0;
+    flex-wrap: nowrap;
+}
+
+/* Каждый столбец */
+.modal-column {
+    flex: 1 1 33%;
+    text-align: center;
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif;
+}
+
+/* Фото */
+.modal-column img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Подпись под фото */
+.modal-photo-caption {
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif; /* Шрифт Book Antiqua */
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Описание под подписью */
+.modal-photo-description {
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif; /* Шрифт Book Antiqua */
+    line-height: 1;
+    text-align: justify;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #000;
+    line-height: 1.5;
+}
+.modal-photo-block-kg img,
+.modal-photo-block-kg1 img{
+    width: 300px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.info-table {
+    width: 65%;                  /* Таблица будет занимать всю ширину родительского контейнера */
+    border-collapse: collapse;   /* Убирает двойные линии между ячейками (границы смыкаются) */
+    margin-top: 15px;            /* Добавляет отступ сверху, чтобы таблица не "прилипала" к тексту выше */
+    font-size: 16px;             /* Устанавливает размер шрифта для текста внутри таблицы */
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid #ccc;      /* Добавляет серую рамку толщиной 1px вокруг каждой ячейки */
+    padding: 8px;                /* Добавляет внутренний отступ, чтобы текст не прилипал к границам */
+    text-align: left;            /* Выравнивает текст по левому краю внутри ячеек */
+}
+.services-grid {
+    display: flex;                /* Ряд */
+    justify-content: space-between;
+    gap: 20px;                    /* Расстояние между карточками */
+    flex-wrap: wrap;              /* Чтобы на мобилках переносилось */
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif;
+    flex: 1 1 22%;                /* 4 карточки в ряд */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.service-caption {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.service-description {
+    font-size: 20px;
+    color: #000;
+    line-height: 1;
+}
+
+.modal-check-icon {
+    width: 36px;              /* Размер галочки примерно под текст */
+    height: 36px;
+    object-fit: contain;
+    vertical-align: middle;   /* Выравнивание по центру строки */
+    margin-right: 5px;        /* Отступ справа от иконки до текста */
+}
+.modal-loader {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+}
+
+.modal-check-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.modal-loader {
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+    object-fit: contain;
+    animation: pulse 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+
+.calculator-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.calculator-info {
+    flex: 1 1 50%;
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif;
+    color: #000;
+}
+
+.calculator-info h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.calculator-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.calculator-form-wrapper {
+    flex: 1 1 40%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.calculator-form-wrapper h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.calculator-form .form-group {
+    margin-bottom: 16px;
+}
+
+.calculator-form label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.calculator-form input {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.calc-placeholder {
+    margin-top: 20px;
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+.text-block4 {
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif; /* Шрифт Book Antiqua */
+}
+
+.text-block2 h3 {
+    margin-bottom: 10px; /* Увеличен отступ */
+    font-size: 32px; /* Увеличен размер */
+    color: #000; /* Более темный цвет */
+    letter-spacing: 0.5px; /* Добавлен межбуквенный интервал */
+    text-align: center;
+}
+
+.text-block3 p {
+    font-size: 20px;
+    color: #000; /* Более мягкий черный */
+    line-height: 1.6; /* Улучшенная читаемость */
+    text-align: center; /* Выравнивание по ширине */
+    hyphens: auto; /* Перенос слов */
+    line-height: 1.2;
+}
+.calculator-form textarea {
+    width: 95%;
+    min-height: 120px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    resize: vertical; /* позволяет менять только высоту */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.3s ease;
+}
+
+.calculator-form textarea:focus {
+    border-color: #888;
+    outline: none;
+}
+
+.calculator-form label {
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif; /* Тот же стиль, что в других важных блоках */
+    font-size: 18px;     /* Чуть крупнее и удобнее для чтения */
+    color: #000;      /* Фирменный синий или другой по твоему выбору */
+    font-weight: 600;    /* Чуть жирнее для акцента */
+    margin-bottom: 6px;  /* Отступ снизу, чтобы не прилипал к полю */
+    display: block;      /* Гарантирует перенос на отдельную строку */
+    letter-spacing: 0.5px; /* Чуть более современно */
+}
+.highlight-word3 {
+    color: #443b69; /* Красный оттенок для выделения */
+    font-weight: bold; /* Сделать жирным */
+}
+.calc-error {
+    margin-top: 16px;
+    color: #b82121;
+    font-size: 16px;
+    background: #fff0f0;
+    border: 1px solid #ffcccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.calc-result {
+    margin-top: 16px;
+    color: #155724;
+    font-size: 18px;
+    background: #f5fff5;
+    border: 1px solid #b2f2b2;
+    border-radius: 8px;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+
+
+.box-scheme {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin-bottom: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-view {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Карта внутри контактов */
+#yandex-map {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для нижней шторки (футера) */
+.footer {
+    position: fixed;
+    bottom: -60px; /* Скрыт по умолчанию */
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: rgba(40, 40, 40, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    transition: bottom 0.4s ease;
+    z-index: 90;
+    text-align: left;
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif; /* Тот же стиль, что в других важных блоках */
+    font-size: 16px;
+}
+
+@media (max-width: 900px) {
+    .footer {
+        text-align: center; /* по центру */
+        font-size: 14px;    /* чуть меньше текст */
+    }
+
+}
+
+@media (max-width: 600px) {
+    .footer {
+        font-size: 12px;    /* ещё меньше текст на телефоне */
+    }
+
+}
+
+.footer.visible {
+    bottom: 0;
+}
+/* Показываем футер при прокрутке */
+body.scrolled .footer {
+    bottom: 0;
+}
+
+/* Ссылка администратора */
+.footer .admin-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 0;
+    transition: background-color 0.2s ease;
+}
+
+.footer .admin-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* Кастомная полоса прокрутки для Яндекс.Браузера (и других Chromium-браузеров) */
+::-webkit-scrollbar {
+    width: 10px; /* Ширина полосы прокрутки */
+    height: 10px; /* Высота горизонтальной полосы */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(210, 180, 140, 0.2); /* Светлый бежевый полупрозрачный фон трека (под стиль сайта) */
+    border-radius: 10px; /* Скругление фона дорожки */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(40, 40, 40, 0.6); /* Темный бегунок */
+    border-radius: 10px; /* Скругление краев бегунка */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Лёгкая полупрозрачная рамка вокруг бегунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(40, 40, 40, 0.8); /* При наведении бегунок темнеет */
+}
+.call-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;       /* такой же цвет, как у product-btn */
+    color: #fff;                  /* белая иконка */
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.call-btn:hover {
+    background-color: #C0C0C0;
+    color: #333;
+}
+
+.call-btn:active {
+    background-color: #808080;
+    color: #fff;
+}
+
+.call-btn i {
+    font-size: 20px;                        /* Только для иконки внутри кнопки */
+    animation: phone-shake 1s infinite;
+    display: inline-block;
+    transform-origin: 50% 60%;
+    transition: color 0.3s;
+}
+
+@keyframes phone-shake {
+    0%   { transform: rotate(0deg);}
+    10%  { transform: rotate(-15deg);}
+    20%  { transform: rotate(12deg);}
+    30%  { transform: rotate(-8deg);}
+    40%  { transform: rotate(8deg);}
+    50%  { transform: rotate(-6deg);}
+    60%  { transform: rotate(6deg);}
+    70%  { transform: rotate(-3deg);}
+    80%  { transform: rotate(3deg);}
+    90%  { transform: rotate(-2deg);}
+    100% { transform: rotate(0deg);}
+}
+
+.contacts-plain-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 36px 0 30px 0;
+    flex-wrap: nowrap;
+}
+
+.contact-plain-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 180px;
+    min-width: 170px;
+    max-width: 250px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Исправлено:
+   - Удали старое правило .contact-plain-item i.bi {...}
+   - Вместо него используй отдельный класс для верхних 4 иконок!
+*/
+
+.contact-main-icon {
+    font-size: 50px;     /* Сделай крупнее, если нужно — подбери размер под макет */
+    color: #424242;
+    margin-bottom: 7px;
+}
+
+.contact-label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 7px;
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif; /* Шрифт Book Antiqua */
+}
+.contact-info {
+    font-size: 18px;
+    color: #000;
+    line-height: 1.5;
+    word-break: break-word;
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif; /* Шрифт Book Antiqua */
+}
+
+
+/* ===== БУРГЕР-МЕНЮ ===== */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 20px; /* добавляет отступ справа */
+    z-index: 1021;
+    transition: background 0.3s;
+}
+.burger-menu span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #ffff;
+    border-radius: 2px;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Крестик для закрытия (только на мобилке) */
+.close-mobile-menu {
+    display: none;
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 38px;
+    font-weight: bold;
+    color: #ffff;
+    cursor: pointer;
+    z-index: 1030;
+    transition: color 0.2s;
+}
+.close-mobile-menu:hover {
+    color: #222;
+}
+
+.mobile-backdrop {
+    position: fixed;
+    z-index: 1020;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(40,40,40,0.45);
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+.mobile-backdrop.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 1260px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 3000;
+        width: 100vw;
+    }
+    body {
+        padding-top: 70px; /* подбери под высоту своей navbar, например 60-75px */
+    }
+    .button-row {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(57, 57, 57, 0.5);
+        backdrop-filter: blur(2px);
+        flex-direction: column;
+        border-radius: 0;
+        padding: 52px 0 14px 0;
+        box-shadow: 0 8px 30px #0000001a;
+        z-index: 2030;
+        align-items: stretch;
+        opacity: 0;
+        transform: translateY(-30px);
+        transition: opacity 0.25s, transform 0.25s;
+        overflow-y: auto;
+    }
+    .btn {
+        width: 90vw;
+        margin: 8px auto;
+        font-size: 22px;
+        padding: 18px 0;
+        border: none;
+        background: rgba(103, 103, 103, 1); /* Более тёмный фон */
+        color: #fff;
+        text-align: center;
+        transition: background 0.18s, color 0.18s, transform 0.15s;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+        font-weight: 300;
+    }
+    .btn:active {
+        background-color: rgba(44, 44, 44, 1); /* Потемнение фона */
+        transition-duration: 0.08s;
+    }
+    .button-row.open {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .burger-menu {
+        display: flex !important;
+    }
+    .close-mobile-menu {
+        display: block;
+    }
+    /* Блокируем скролл body при открытом меню */
+    body.menu-open {
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+        width: 100vw;
+    }
+    .button-row.open {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .mobile-backdrop {
+        z-index: 2000 !important;
+    }
+}
+@media (max-width: 880px) {
+    .about-grid {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .text-block {
+        width: 57% /* ширина минус ширина картинок + отступы, подгони если нужно */
+        padding: 0 0 0 2px;
+        font-size: 15px;
+        line-height: 1.2;
+    }
+    .text-block h2 {
+        font-size: 19px;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    .text-block p {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    .images-grid {
+        width: 100px;     /* фикс ширина столбца с картинками */
+        min-width: 90px;
+        max-width: 110px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+        margin: 5px 5px 5px 0; /* отступ справа и сверху/снизу */
+        box-sizing: border-box;
+        position: relative;
+    }
+    .images-grid img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: transform 0.3s cubic-bezier(.38,.16,.27,1.16), box-shadow 0.3s;
+        position: relative; /* Чтобы z-index работал */
+        z-index: 1;
+    }
+    .images-grid img:hover {
+        transform: scale(3) translateX(-45px);
+        /* -66px примерно равен 2 ширинам картинки минус небольшой отступ,
+           чтобы при увеличении вправо картинка не уходила за пределы экрана.
+           Можете подбирать число индивидуально под ваш макет.
+        */
+        z-index: 10;         /* Поверх других элементов */
+        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+}
+@media (max-width: 600px) {
+    .about-grid {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .text-block {
+        width: calc(100vw - 120px); /* ширина минус ширина картинок + отступы, подгони если нужно */
+        min-width: 0;
+        padding: 0 0 0 2px;
+        font-size: 15px;
+        line-height: 1.2;
+    }
+    .text-block h2 {
+        font-size: 19px;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    .text-block p {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    .images-grid {
+        width: 100px;     /* фикс ширина столбца с картинками */
+        min-width: 90px;
+        max-width: 110px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 50px;
+        margin: 5px 5px 5px 0; /* отступ справа и сверху/снизу */
+        box-sizing: border-box;
+        position: relative;
+    }
+    .images-grid img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: transform 0.3s cubic-bezier(.38,.16,.27,1.16), box-shadow 0.3s;
+        position: relative; /* Чтобы z-index работал */
+        z-index: 1;
+    }
+    .images-grid img:hover {
+        transform: scale(3) translateX(-45px);
+        /* -66px примерно равен 2 ширинам картинки минус небольшой отступ,
+           чтобы при увеличении вправо картинка не уходила за пределы экрана.
+           Можете подбирать число индивидуально под ваш макет.
+        */
+        z-index: 10;         /* Поверх других элементов */
+        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+
+    @media (max-width: 900px) {
+    /* --- Ассортимент --- */
+        .products-grid {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 8px;
+            overflow-x: auto;   /* чтобы на совсем маленьких не ломалось, можно скроллить */
+            padding-bottom: 5px;
+        }
+        .product-item {
+            width: 100px;
+            min-width: 100px;
+            max-width: 100px;
+            gap: 3px;
+            margin: 0;
+        }
+        .product-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 7px;
+        }
+        .product-btn {
+            font-size: 12px;
+            padding: 6px 6px;
+            border-radius: 5px;
+            margin-top: 2px;
+        }
+        .text-block2 h2 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+        .text-block2 p {
+            font-size: 11px;
+        }
+    }
+    @media (max-width: 900px) {
+        .services-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr; /* 2 в ряд */
+            gap: 10px;
+            margin: 0;
+        }
+        .service-card {
+            padding: 10px;
+            border-radius: 7px;
+            font-size: 13px;
+            min-width: 0;
+            max-width: unset;
+            margin: 0;
+        }
+        .service-card img {
+            width: 100%;
+            aspect-ratio: 1/1;            /* ДЕЛАЕТ КАРТИНКУ КВАДРАТНОЙ */
+            height: auto;                 /* Современный способ! */
+            min-width: 0;
+            min-height: 0;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            display: block;
+            background: #eee;             /* Серый фон, если вдруг нет картинки */
+        }
+        .service-caption {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+        .service-description {
+            font-size: 12px;
+            line-height: 1.25;
+        }
+    }
+    @media (max-width: 900px) {
+        .calculator-content {
+            padding: 10px 2vw;
+            margin: 10px 0;
+        }
+        .text-block2 h3 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+        .text-block2 p,
+        .calculator-info p,
+        .calculator-form-wrapper p {
+            font-size: 11px;
+            line-height: 1.4;
+        }
+        .calculator-grid {
+            gap: 10px;
+            flex-direction: column;
+        }
+        .calculator-form-wrapper {
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+        .calculator-form label {
+            font-size: 11px;
+            margin-bottom: 2px;
+        }
+        .calculator-form input,
+        .calculator-form textarea {
+            font-size: 12px;
+            padding: 6px 8px;
+            border-radius: 4px;
+        }
+        .calculator-form .form-group {
+            margin-bottom: 7px;
+        }
+
+        .calc-result,
+        .calc-error {
+            font-size: 11px;
+            padding: 7px 8px;
+            border-radius: 7px;
+            margin-top: 8px;
+        }
+        .box-scheme,
+        .box-view {
+            width: 100%;
+            max-width: 160px;
+            margin: 5px auto 5px auto;
+            display: block;
+        }
+    }
+    @media (max-width: 900px) {
+        .highlight-word3 {
+            color: #595959e2;            /* светло-серый */
+            font-size: 8px;         /* ещё меньше! */
+            font-weight: normal;
+            opacity: 0.6;           /* практически полупрозрачный */
+            line-height: 1.2;
+            margin-top: 3px;
+            display: block;         /* перенос строки если нужно */
+        }
+    }
+    @media (max-width: 900px) {
+
+    /* Сетка: 2 в ряд, автоматическая адаптация */
+        .contacts-plain-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 10px; /* между строками и столбцами */
+            margin: 18px 0 18px 0;
+            justify-items: center;
+        }
+
+        /* Элемент: компактный, центрирование */
+        .contact-plain-item {
+            min-width: 0;
+            max-width: 100%;
+            padding: 2px 5px;
+            margin-bottom: 0;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Уменьшаем иконки */
+        .contact-main-icon {
+            font-size: 30px !important;
+            margin-bottom: 4px;
+        }
+
+        /* Подпись */
+        .contact-label {
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+        .contact-info {
+            font-size: 11px;
+            line-height: 1.3;
+        }
+
+        /* Кнопка позвонить меньше */
+        .call-btn {
+            width: 20px;
+            height: 20px;
+            margin-left: 4px;
+            font-size: 13px;
+            padding: 0;
+        }
+        .call-btn i {
+            font-size: 13px;
+        }
+    }
+    @media (max-width: 900px) {
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 3000;
+            width: 100vw;
+        }
+        .button-row {
+            display: none;
+            flex-direction: column;
+            background-color: rgba(57, 57, 57, 0.5);
+            backdrop-filter: blur(2px);
+            padding: 52px 0 14px 0;
+            z-index: 2030;
+        }
+        .button-row.open {
+            display: flex;
+        }
+        .burger-menu {
+            display: flex !important;
+        }
+    }
+    @media (max-width: 900px) {
+        #yandex-map {
+            width: 100%;
+            height: 220px;
+            margin: 12px 0 0 0;
+            border-radius: 10px;
+        }
+    }
+    @media (max-width: 900px) {
+    /* Контейнер модального окна */
+        .modal-content {
+            margin: 100px auto 0 auto;
+            width: 80%;
+            padding: 16px;
+            border-radius: 10px;
+        }
+
+        /* Блок с изображением и текстом */
+        .modal-section {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Картинка коробки */
+        .modal-img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            object-fit: cover; /* или contain — смотри ниже */
+            margin: 0 auto;
+            border-radius: 8px;
+            align-items: center;
+        }
+
+        /* Текст под картинкой */
+        .modal-text {
+            width: 100%;
+
+        }
+
+        .modal-text h3 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .modal1-full-text p{
+            font-size: 14px;
+            ine-height: 1.2;
+            text-align: justify;
+        }
+        .modal-text p {
+            font-size: 12px;
+            line-height: 1.2;
+            text-align: justify;
+        }
+
+
+        /* Изображение внутри блока */
+        .modal-photo-block-kg1 img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Текстовые подписи */
+        .modal-photo-caption {
+            font-size: 15px;
+            margin-top: 6px;
+            align-items: center;
+        }
+
+        .modal-photo-description {
+            font-size: 14px;
+            padding: 0 6px;
+            text-align: justify;
+        }
+        /* Дополнительный текст (если есть описание) */
+        .modal1-full-text {
+            font-size: 11px;
+            text-align: justify;
+            padding: 0 6px;
+        }
+
+        /* Таблица с параметрами коробки (если есть) */
+        .info-table {
+            width: 100%;
+            font-size: 12px;
+        }
+
+        .info-table th,
+        .info-table td {
+            padding: 6px;
+        }
+        /* Адаптация блока из трёх колонок */
+        .modal-three-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .modal-column {
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .modal-column img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            object-fit: cover; /* или contain */
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+        .modal-photo-block-kg {
+            width: 100%; /* Блок занимает всю ширину родителя */
+            max-width: 100%;
+            box-sizing: border-box;
+            text-align: center; /* Центрирует изображение */
+        }
+
+        .modal-photo-block-kg img {
+            width: 100%;         /* Растягивается по ширине контейнера */
+            max-width: 100%;     /* Не выходит за пределы */
+            height: auto;        /* Высота рассчитывается автоматически */
+            object-fit: contain; /* Сохраняет пропорции */
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .modal-photo-caption {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .modal-photo-description {
+            font-size: 12px;
+            text-align: justify;
+            padding: 0 8px;
+        }
+
+        #requestModal .modal-content,
+        #loadingModal .modal-content {
+            margin: 200px auto 0 auto; /* 200px сверху, по центру */
+            width: 85%;
+            padding: 20px 12px;
+            border-radius: 10px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* Текст в модалке "Заявка успешно отправлена" */
+        #requestModal .modal1-full-text p {
+            font-size: 12px;
+            line-height: 1.4;
+            margin: 8px 0;
+        }
+
+        /* Галочка */
+        .modal-check-icon {
+            width: 36px;
+            height: 36px;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+
+        /* Гифка в окне загрузки */
+        .modal-loader {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+    }
+}
+
+

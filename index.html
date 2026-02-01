@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Компания ООО"БУМАГА И КАРТОН" | Купить бумагу | Купить картон | Купить гофрокартон | Купить коробки | Заказать коробки | Изготовить коробки под свои размеры | Бумажные компании | Бумажные компании в Самаре | Производство бумаги</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Подключаем Яндекс.Карты API -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=58e1f8ae-395c-465f-9b97-65f722b0f2d6" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="navbar">
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Логотип компании" class="logo">
+        <span class="company-name">ООО "БИК"</span>
+    </div>
+    <div class="burger-menu" id="burgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="mobile-backdrop hidden" id="mobile-backdrop"></div>
+    <div class="button-row" id="navMenu">
+        <span class="close-mobile-menu" id="closeMobileMenu">&times;</span>
+        <button class="btn nav-link" data-section="about">О компании</button>
+        <button class="btn nav-link" data-section="products">Ассортимент</button>
+        <button class="btn nav-link" data-section="services">Услуги</button>
+        <button class="btn nav-link" data-section="calculator">Калькулятор</button>
+        <button class="btn nav-link" data-section="contacts">Контакты</button>
+    </div>
+
+</div>
+
+<!-- Компенсация высоты верхнего меню -->
+<div style="height: 30px;"></div>
+
+<section id="about" class="fade-in">
+    <div class="content about-grid">
+        <div class="text-block">
+            <h2>О компании</h2>
+            <p>ООО"БУМАГА И КАРТОН" (ООО "БИК") — современное предприятие, основанное вначале 2025 года и специализирующееся на производстве бумажной продукции.</p>
+            <p>С первых дней работы компания активно развивается, осваивая новые технологии и расширяя ассортимент. Также было запущено производство гофрированного картона, а вскоре начался выпуск картонных коробок.</p>
+            <p>Ключевым фактором успеха ООО "БИК" является команда высококвалифицированных специалистов с многолетним опытом работы в сфере производства бумажной продукции. Наши сотрудники — это профессионалы, которые знают все тонкости технологических процессов и постоянно совершенствуют свои навыки, чтобы предлагать клиентам только лучшие решения.</p>
+            <p>Благодаря высокому качеству продукции, надежному сервису и индивидуальному подходу к каждому заказчику ООО "БИК" быстро завоевало доверие промышленных предприятий, став проверенным поставщиком. Сегодня компания продолжает развиваться, укрепляя свои позиции на рынке.</p>
+        </div>
+        <div class="images-grid">
+            <img src="images/f1.jpg" alt="Фото 1">
+            <img src="images/f2.jpg" alt="Фото 2">
+            <img src="images/f3.jpg" alt="Фото 3">
+            <img src="images/f4.jpg" alt="Фото 4">
+        </div>
+    </div>
+</section>
+
+<section id="products" class="fade-in">
+    <div class="content products-content">
+        <div class="text-block2">
+            <h2>Ассортимент</h2>
+            <p>ООО"БУМАГА И КАРТОН" предлагает следующие виды продукции</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="images/a1.jpg" alt="Продукт 1">
+                <button class="product-btn" onclick="openModal('modal1')">Короба</button>
+            </div>
+            <div class="product-item">
+                <img src="images/a2.jpg" alt="Продукт 2">
+                <button class="product-btn" onclick="openModal('modal2')">Картон</button>
+            </div>
+            <div class="product-item">
+                <img src="images/a3.jpg" alt="Продукт 3">
+                <button class="product-btn" onclick="openModal('modal3')">Бумага</button>
+            </div>
+        </div>
+        <div class="text-block2">
+            <p>Ознакомьтесь с нашим ассортиментом и отправьте необходимые данные на почту  <span class="highlight-word">sambu1@bk.ru</span>
+                <span style="position: relative; display: inline-block; width: 70px; height: 70px; vertical-align: middle;">
+  <svg viewBox="0 0 70 70" width="70" height="70" style="position: absolute; top: 0; left: 0; pointer-events: none;">
+    <defs>
+      <path id="circleTextPath"
+            d="M35,35
+           m-28,0
+           a28,28 0 1,1 56,0
+           a28,28 0 1,1 -56,0"/>
+    </defs>
+    <text font-size="10" font-weight="400" fill="#333" letter-spacing="2">
+      <textPath xlink:href="#circleTextPath" startOffset="0">
+        БЫСТРАЯ СВЯЗЬ С НАМИ • БЫСТРАЯ СВЯЗЬ С НАМИ •
+      </textPath>
+    </text>
+  </svg>
+  <a href="mailto:sambu1@bk.ru" class="mail-circle-btn" title="Быстрая связь по почте"
+     style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+    <i class="bi bi-envelope-at"></i>
+  </a>
+</span>
+            </p>
+            <p><span class="highlight-word2">Внимание!!!</span></p>
+            <p>На сайте представлен не весь предлагаемый ассортимент.<br>
+                Информацию о наличии нужной продукции уточняйте у специалистов нашей компании.</p>
+        </div>
+    </div>
+</section>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <div class="modal-body">
+            <div class="modal1-full-text">
+                <p>Производство тары и упаковки осуществляется по оптимальным ценам, объемом от 50 шт. до сотен тысяч, в срок от 2х дней.
+                    Наша компания производит любую гофротару вне зависимости от сложности, размера и конфигурации упаковки.</p>
+            </div>
+            <div class="modal-section">
+                <img src="images/k1.jpg" alt="Фото 1" class="modal-img">
+                <div class="modal-text">
+                    <h3>Короба из гофрокартона</h3>
+                    <p>Картонные короба изготовленные из гофрокартона по вашим параметрам. В заявке укажите необходимые параметры, такие как Длина х Ширина х Высота, и необходимое количество штук.</p>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <img src="images/k2.jpg" alt="Фото 2" class="modal-img">
+                <div class="modal-text">
+                    <h3>Гофрокартон в листах</h3>
+                    <p>Гофрированный картон - широко распространенный упаковочный материал, используемый для перевозки и складирования разнообразной продукции и техники.</p>
+                    <p>Комбинация плоских и гофрированных слоев создает легкий, но жесткий материал, обладающий высокой устойчивостью к физическим воздействиям.</p>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <img src="images/k3.png" alt="Фото 3" class="modal-img">
+                <div class="modal-text">
+                    <h3>Прокладки 2-х и 3-х слойные</h3>
+                    <p>2-х слойные состоят из одного плоского слоя и одиного гофрированного слоя.</p>
+                    <p>3-х слойные состоят из двух плоских слоев между которыми идет один гофрированный слой.</p>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <img src="images/k4.jpg" alt="Фото 4" class="modal-img">
+                <div class="modal-text">
+                    <h3>Гофрокартон 2-х слойный в рулонах</h3>
+                    <p>Состоит из одного плоского и одного гофрированного слоев, что делает его достаточно гибким.</p>
+                </div>
+            </div>
+
+            <div class="modal1-full-text">
+                <p>Чтобы купить или заказать картонные коробки в Самаре или изделия из гофрированного картона, а так же уточнить цены или задать интересующие вопросы достаточно оставить заявку на нашем сайте или написать нам на почту <span class="highlight-word">sambu1@bk.ru</span>. Наши специалисты свяжутся с Вами в самое ближайшее время.<p>
+                <p>Вы также можете позвонить нам по телефонам:<br> </p>
+                <div id="phones-list">
+                    <div class="phone-item">
+                        <span class="phone-text">+7 (846) 203 26 65</span>
+                        <a class="call-btn" href="tel:+78462032665">
+                            <i class="bi bi-phone-vibrate"></i>
+                        </a>
+                    </div>
+
+                    <div class="phone-item">
+                        <span class="phone-text">+7 (846) 203 18 20</span>
+                        <a class="call-btn" href="tel:+78462031820">
+                            <i class="bi bi-phone-vibrate"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <p><span class="highlight-word2">Внимание!!!</span></p>
+                <p>На сайте представлен не весь предлагаемый ассортимент.<br>
+                    Информацию о наличии нужной продукции уточняйте у специалистов нашей компании.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <div class="modal-body">
+            <div class="modal1-full-text">
+                <p>ООО"БУМАГА И КАРТОН"  специализируется на выпуске изделий из картона в Самаре.
+                    Среди широкого ассортимента нашей продукции Вы найдете все основные марки картона.
+                    Все они изготавливаются из качественного сырья при строгом контроле всех технологических процессов и полностью соответствуют требованиям <span class="highlight-word2">ГОСТ 7933-89 "Картон для потребительской тары" </span>.</p>
+            </div>
+            <div class="modal-three-columns">
+                <div class="modal-photo-block">
+                    <div class="modal-photo-block-kg1" >
+                        <img src="images/kg1.png" alt="Картон прокладочный «Б»" >
+                    </div>
+                    <div class="modal-photo-caption">Картон прокладочный «Б»<br>0,8-2,5 мм.</div>
+                    <div class="modal-photo-description">
+                        Плотный и прочный материал, предназначенный для изготовления уплотнительных и изоляционных прокладок, а также для защиты и теплоизоляции в различных технических и промышленных применениях.
+                    </div>
+                </div>
+
+                <div class="modal-photo-block">
+                    <div class="modal-photo-block-kg1">
+                        <img src="images/kg2.jpg" alt="Картон коробочный «В»">
+                    </div>
+                    <div class="modal-photo-caption">Картон коробочный «В»<br>0,6-0,8 мм<br>250 - 400 гр./м.кв.</div>
+                    <div class="modal-photo-description">
+                        Достаточно плотный и жесткий материал, используемый преимущественно для изготовления потребительской и транспортной тары.<br>
+                        Картон коробочный применяется в качестве прокладочного материала и упаковки промышленных изделий, мебели. Выпускается в рулонах и листах (под заказ).
+                    </div>
+                </div>
+
+                <div class="modal-photo-block">
+                    <div class="modal-photo-block-kg1">
+                        <img src="images/kg3.jpeg" alt="Картон переплетный ПКС">
+                    </div>
+                    <div class="modal-photo-caption">Картон переплетный<br>1,0-2,5 мм.</div>
+                    <div class="modal-photo-description">
+                        Прочный и плотный макулатурный склеенный картон коричневого цвета, предназначенный главным образом для изготовления переплетных крышек книг, обложек, папок и другой жёсткой упаковки.
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal1-full-text">
+                <p>Возможности нашего производства позволяют выпускать <span class="highlight-word2">большие объемы</span> изделий из картона <span class="highlight-word2">в короткие сроки</span>,
+                    потому мы всегда готовы к крупным оптовым поставкам.</p>
+                <p>Чтобы купить/заказать картон и изделия из картона в Самаре,
+                    а так же уточнить цены или задать интересующие вопросы достаточно оставить заявку на нашем сайте или
+                    написать нам на почту <span class="highlight-word">sambu1@bk.ru</span>.
+                    Наши специалисты свяжутся с Вами в самое ближайшее время.<p>
+                <p>Вы также можете позвонить нам по телефонам: <br>
+                </p>
+                <div id="phones-list">
+                    <div class="phone-item">
+                        <span class="phone-text">+7 (846) 203 26 65</span>
+                        <a class="call-btn" href="tel:+78462032665">
+                            <i class="bi bi-phone-vibrate"></i>
+                        </a>
+                    </div>
+
+                    <div class="phone-item">
+                        <span class="phone-text">+7 (846) 203 18 20</span>
+                        <a class="call-btn" href="tel:+78462031820">
+                            <i class="bi bi-phone-vibrate"></i>
+                        </a>
+                    </div>
+                </div>
+                <p><span class="highlight-word2">Внимание!!!</span></p>
+                <p>На сайте представлен не весь предлагаемый ассортимент.<br>
+                    Информацию о наличии нужной продукции уточняйте у специалистов нашей компании.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <div class="modal-body">
+            <div class="modal1-full-text">
+                <p>Компания ООО"БУМАГА И КАРТОН" предлагает широкий выбор бумажной продукции для упаковки, печати и технических целей.
+                    Наша бумага производится из экологически чистого сырья, отличается прочностью, безопасностью и стабильным качеством.
+                    Все виды бумаги соответствуют требованиям ГОСТ и подходят для использования в различных сферах — от пищевой промышленности до коммерческой упаковки и полиграфии.</p>
+            </div>
+            <div class="modal-section">
+                <img src="images/p1.jpg" alt="Бумага оберточная" class="modal-img">
+                <div class="modal-text">
+                    <h3>Бумага оберточная</h3>
+                    <p>Тонкий материал, используемый для упаковки и защиты товаров.
+                        Помогает сохранить внешний вид продукта, предотвращает повреждения и облегчает транспортировку.
+                        <br>Применяется для упаковки подарков, продуктов питания, цветов и других предметов.</p>
+
+                    <div class="more-info" style="display: none;" class="modal1-full-text">
+
+                        <div class="modal-to-columns">
+                            <div class="modal-photo-block">
+                                <div class="modal-photo-block-kg">
+                                    <img src="images/po1.jpg" alt="Бумага оберточная марки Д (пищевая)">
+                                </div>
+                                <div class="modal-photo-caption">Бумага оберточная марки "Д" (пищевая)</div>
+                                <div class="modal-photo-description">Марка "Д" — полуцеллюлоза (промежуточный продукт), небеленая целлюлоза и древесная масса.</div>
+                            </div>
+                            <div class="modal-three-columns">
+                                <div class="modal-photo-block">
+                                    <div class="modal-photo-block-kg">
+                                        <img src="images/po2.jpg" alt="Бумага оберточная марки Е (не пищевая)">
+                                    </div>
+                                    <div class="modal-photo-caption">Бумага оберточная марки "Е" (не пищевая)</div>
+                                    <div class="modal-photo-description">Марка "Е" — небеленая целлюлоза, волокнистые побочные продукты бумажного производства, макулатура.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <button class="product-btn" onclick="toggleMoreInfo(this)">Показать больше</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <img src="images/p2.jpg" alt="Бумага мешочная (крафт) МЦБК" class="modal-img">
+                <div class="modal-text">
+                    <h3>Бумага мешочная (крафт) МЦБК</h3>
+                    <p>Тонкая и легкая бумага, используется для недорогой упаковки и печати. Подходит для временной защиты предметов при переезде.</p>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <img src="images/p3.jpg" alt="Бумага парафинированная БП 3-35" class="modal-img">
+                <div class="modal-text">
+                    <h3>Бумага парафинированная БП 3-35</h3>
+                    <p>Относится к типу технической бумаги, предназначенной для упаковки и защиты продукции от влаги, жира и загрязнений. Она изготавливается путем пропитки или нанесения слоя парафина на поверхность бумажной основы, что придает материалу водо- и жиростойкие свойства.</p>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <img src="images/p4.png" alt="Бумага технического назначения" class="modal-img">
+                <div class="modal-text">
+                    <h3>Бумага технического назначения</h3>
+                    <p>Специализированный вид бумажной продукции, предназначенной для выполнения различных технических и производственных функций. В зависимости от области применения она может обладать особыми свойствами — повышенной прочностью, влагостойкостью, устойчивостью к высоким температурам или химическим воздействиям.</p>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <img src="images/p5.jpg" alt="Бумага газетная" class="modal-img">
+                <div class="modal-text">
+                    <h3>Бумага газетная</h3>
+                    <p>Производится преимущественно из механической массы с минимальным содержанием химической целлюлозы, что придает ей характерный серовато-желтый оттенок.
+                        Отличается мягкой, рыхлой структурой и способностью быстро впитывать краску, что важно при высокоскоростной печати газетных изданий.
+                        <br>Газетная бумага экономична в производстве и ориентирована на кратковременное использование, сохраняя при этом достаточное качество для передачи текста и изображений в массовых тиражах.</p>
+                    <table class="info-table">
+                        <tr>
+                            <th>Колличество в пачке</th>
+                            <th>Формат</th>
+                            <th>Плотность</th>
+                        </tr>
+                        <tr>
+                            <td>1000 л.</td>
+                            <td>А3</td>
+                            <td>48,8 гр.</td>
+                        </tr>
+                        <tr>
+                            <td>1000 л.</td>
+                            <td>А4</td>
+                            <td>48,8 гр.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <img src="images/p6.png" alt="Бумага офсетная" class="modal-img">
+                <div class="modal-text">
+                    <h3>Бумага офсетная</h3>
+                    <p>Изготавливается из высококачественной целлюлозы с добавлением минеральных наполнителей, что обеспечивает гладкость поверхности и оптимальное впитывание краски.
+                        Обладает высокой белизной, устойчивостью к износу и стабильными печатными характеристиками, что делает ее универсальной для различных видов печатной продукции — от книг и журналов до рекламных материалов.</p>
+                    <table class="info-table">
+                        <tr>
+                            <th>Колличество в пачке</th>
+                            <th>Формат</th>
+                            <th>Плотность</th>
+                        </tr>
+                        <tr>
+                            <td>1000 л.</td>
+                            <td>А3</td>
+                            <td>65 гр.</td>
+                        </tr>
+                        <tr>
+                            <td>1000 л.</td>
+                            <td>А4</td>
+                            <td>65 гр.</td>
+                        </tr>
+                        <tr>
+                            <td>500 л.</td>
+                            <td>A3</td>
+                            <td>160 гр.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal1-full-text">
+                <p>В сообщении уажите нужное количество той или иной позиции в соответствующих единицах измерения.
+                    <br>Чтобы купить или заказать бумагу в Самаре,
+                    а так же уточнить цены или задать интересующие вопросы достаточно оставить заявку на нашем сайте или
+                    написать нам на почту <span class="highlight-word">sambu1@bk.ru</span>.
+                    Наши специалисты свяжутся с Вами в самое ближайшее время.<p>
+                <p>Вы также можете позвонить нам по телефонам: <br>
+                </p>
+                <div id="phones-list">
+                    <div class="phone-item">
+                        <span class="phone-text">+7 (846) 203 26 65</span>
+                        <a class="call-btn" href="tel:+78462032665">
+                            <i class="bi bi-phone-vibrate"></i>
+                        </a>
+                    </div>
+
+                    <div class="phone-item">
+                        <span class="phone-text">+7 (846) 203 18 20</span>
+                        <a class="call-btn" href="tel:+78462031820">
+                            <i class="bi bi-phone-vibrate"></i>
+                        </a>
+                    </div>
+                </div>
+                <p><span class="highlight-word2">Внимание!!!</span></p>
+                <p>На сайте представлен не весь предлагаемый ассортимент.<br>
+                    Информацию о наличии нужной продукции уточняйте у специалистов нашей компании.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="services" class="fade-in">
+    <div class="content">
+        <div class="text-block2">
+            <h2>Услуги</h2>
+            <p>ООО"БУМАГА И КАРТОН" предлагает следующие виды дополнительных услуг.
+                <br>Данные услуги расчитываются отделденно от приобритения продукции и не входят в ее стоимость.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/s1.png" alt="Резка на формат">
+                <div class="service-caption">Резка на формат</div>
+                <p class="service-description">Осуществляем резку продукции на нужные размеры по вашему запросу.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="images/s2.png" alt="Размотка на рулоны">
+                <div class="service-caption">Размотка на рулоны</div>
+                <p class="service-description">Разматываем бумагу и картон на рулоны заданной длины.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="images/s3.jpg" alt="Доставка">
+                <div class="service-caption">Доставка</div>
+                <p class="service-description">Организуем доставку на указанный вами адрес, нашим автотранспортом.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="images/s4.jpg" alt="Хранение на складе">
+                <div class="service-caption">Хранение на складе</div>
+                <p class="service-description">Обеспечиваем временное хранение вашей готовой упаковочной продукции на нашем складе.</p>
+            </div>
+        </div>
+        <div class="text-block2">
+            <p><span class="highlight-word2">Внимание!!!</span></p>
+            <p>Информацию о предоставляемых услугах уточняйте у специалистов нашей компании.</p>
+        </div>
+    </div>
+</section>
+
+<section id="calculator" class="fade-in">
+    <div class="content calculator-content">
+        <div class="text-block2">
+            <h3>Калькулятор</h3>
+            <p>
+                <strong><span class="highlight-word2">Обратите внимание:</span></strong>
+                расчет стоимости производства является ориентировочным.<br>
+                Для получения точного расчета свяжитесь с нашими специалистами.
+            </p>
+        </div>
+        <div class="calculator-grid">
+            <div class="calculator-form-wrapper">
+                <div class="text-block4">
+                    <h3>Калькулятор коробок</h3>
+                    <p>Введите размеры и количество, чтобы узнать предварительную стоимость заказа.</p>
+                </div>
+                <form class="calculator-form" id="boxCalcForm" autocomplete="off">
+                    <div class="form-group">
+                        <label for="length">Длина (мм):</label>
+                        <input type="number" id="length" name="length" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="width">Ширина (мм):</label>
+                        <input type="number" id="width" name="width" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Высота (мм):</label>
+                        <input type="number" id="height" name="height" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Количество (шт):</label>
+                        <input type="number" id="quantity" name="quantity" required placeholder="не менее 500 шт">
+                    </div>
+                    <button type="submit" class="product-btn">Рассчитать</button>
+                </form>
+                <!-- Результат расчета будет вставляться вот сюда! -->
+                <div id="calcResult"></div>
+            </div>
+            <div class="calculator-info">
+                <div class="text-block4">
+                    <p>Схема развертки стандартной коробки</p>
+                    <img src="images/kor1.jpg" alt="Схема" class="box-scheme">
+                    <p>Схема собранной стандартной коробки</p>
+                    <img src="images/kor2.jpg" alt="Вид коробки" class="box-view">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Контакты -->
+<section id="contacts" class="fade-in">
+    <div class="content contacts-section">
+        <div class="text-block2">
+            <h2>Контакты</h2>
+            <p>ООО"БУМАГА И КАРТОН"</p>
+        </div>
+        <div class="contacts-plain-grid">
+            <div class="contact-plain-item">
+                <i class="bi bi-geo-alt contact-main-icon"></i>
+                <div class="contact-label">Адрес</div>
+                <div class="contact-info">г.Самара, ул.Заводское шоссе, д.9</div>
+            </div>
+            <div class="contact-plain-item">
+                <i class="bi bi-telephone contact-main-icon"></i>
+                <div class="contact-label">Телефон</div>
+                <div class="contact-info">
+                    <div id="phones-list">
+                        <div class="phone-item">
+                            <span class="phone-text">+7 (846) 203 26 65</span>
+                            <a class="call-btn" href="tel:+78462032665">
+                                <i class="bi bi-phone-vibrate"></i>
+                            </a>
+                        </div>
+
+                        <div class="phone-item">
+                            <span class="phone-text">+7 (846) 203 18 20</span>
+                            <a class="call-btn" href="tel:+78462031820">
+                                <i class="bi bi-phone-vibrate"></i>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="contact-plain-item">
+            <i class="bi bi-envelope-at contact-main-icon"></i>
+            <div class="contact-label">Email</div>
+            <div class="contact-info">sambu1@bk.ru<p><span style="position: relative; display: inline-block; width: 70px; height: 70px; vertical-align: middle;">
+  <svg viewBox="0 0 70 70" width="70" height="70" style="position: absolute; top: 0; left: 0; pointer-events: none;">
+    <defs>
+      <path id="circleTextPath"
+            d="M35,35
+           m-28,0
+           a28,28 0 1,1 56,0
+           a28,28 0 1,1 -56,0"/>
+    </defs>
+    <text font-size="10" font-weight="400" fill="#333" letter-spacing="2">
+      <textPath xlink:href="#circleTextPath" startOffset="0">
+        БЫСТРАЯ СВЯЗЬ С НАМИ • БЫСТРАЯ СВЯЗЬ С НАМИ •
+      </textPath>
+    </text>
+  </svg>
+  <a href="mailto:sambu1@bk.ru" class="mail-circle-btn" title="Быстрая связь по почте"
+     style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+    <i class="bi bi-envelope-at"></i>
+  </a>
+</span></p></div>
+
+        </div>
+        <div class="contact-plain-item">
+            <i class="bi bi-clock contact-main-icon"></i>
+            <div class="contact-label">Режим работы</div>
+            <div class="contact-info">Пн–Пт, 7:30–17:00</div>
+        </div>
+    </div>
+    <div id="yandex-map" class="map"></div>
+    </div>
+</section>
+
+
+
+<!-- Нижняя шторка -->
+<div class="footer">
+    <p>&copy; 2026 ООО "БУМАГА И КАРТОН"   г. Самара, ул. Заводское шоссе, д.9</p>
+</div>
+
+<script>//????? НЕПОЙМИ ЧТО
+    window.addEventListener('scroll', () => {
+        const footer = document.querySelector('.footer');
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+
+        // Показываем футер, когда пользователь долистал до конца (или почти до конца)
+        if (scrollTop + windowHeight >= docHeight - 5) {
+            footer.classList.add('visible');
+        } else {
+            footer.classList.remove('visible');
+        }
+    });
+</script>
+
+
+
+<script>
+    // Функция для открытия модального окна по ID
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'block';
+        }
+    }
+
+    // Функция для закрытия модального окна по ID
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+
+<script>
+    function toggleMoreInfo(button) {
+        const container = button.closest(".modal-text");
+        const moreInfo = container.querySelector(".more-info");
+        if (moreInfo) {
+            if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+                moreInfo.style.display = "block";
+                button.textContent = "Скрыть";
+            } else {
+                moreInfo.style.display = "none";
+                button.textContent = "Показать больше";
+            }
+        }
+    }
+</script>
+
+<script>
+    const orderForm = document.querySelector('#orders form');
+
+    orderForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        openModal('loadingModal');
+
+        const formData = new FormData(orderForm);
+
+        fetch('/send-request', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(result => {
+            closeModal('loadingModal');
+
+            if (result.includes('успешно')) {
+                openModal('requestModal');
+                orderForm.reset();
+            } else {
+                alert('Ошибка при отправке: ' + result);
+            }
+        })
+            .catch(error => {
+            closeModal('loadingModal');
+            alert('Произошла ошибка. Попробуйте позже.');
+            console.error(error);
+        });
+    });
+
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'block';
+        }
+    }
+
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+
+    window.addEventListener('click', function(event) {
+        const modal = event.target.closest('.modal');
+        if (modal && event.target === modal) {
+            const isBlocked = modal.getAttribute('data-blocked') === 'true';
+            if (!isBlocked) {
+                modal.style.display = 'none';
+            }
+        }
+    });
+
+
+    window.addEventListener('keydown', function(e) {
+        const loadingModal = document.getElementById('loadingModal');
+        if (e.key === 'Escape' && loadingModal.style.display === 'block') {
+            e.preventDefault();
+        }
+    });
+</script>
+<div class="mobile-backdrop hidden" id="mobile-backdrop"></div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const burger = document.getElementById('burgerMenu');
+        const menu = document.getElementById('navMenu');
+        const backdrop = document.getElementById('mobile-backdrop');
+        const closeBtn = document.getElementById('closeMobileMenu');
+        const navbar = document.querySelector('.navbar'); // ДОБАВЛЕНО для работы со скроллом
+
+        function openMenu() {
+            menu.classList.add('open');
+            backdrop.classList.remove('hidden');
+            document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+            menu.classList.remove('open');
+            backdrop.classList.add('hidden');
+            document.body.style.overflow = "";
+        }
+
+        burger.addEventListener('click', function (e) {
+            e.stopPropagation();
+            openMenu();
+        });
+
+        closeBtn.addEventListener('click', function () {
+            closeMenu();
+        });
+
+        backdrop.addEventListener('click', function() {
+            closeMenu();
+        });
+
+        document.addEventListener('click', function(event) {
+            if (window.innerWidth <= 900 &&
+            !burger.contains(event.target) &&
+            !menu.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 900) {
+                closeMenu();
+            }
+        });
+
+        // --- ЭФФЕКТ СКРЫТИЯ И ПОКАЗА НАВБАРА ---
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', function () {
+            if (!navbar) return;
+            if (window.scrollY < lastScrollY || window.scrollY < 40) {
+                // Скроллим вверх или почти у самого верха — показываем navbar
+                navbar.classList.remove('navbar-hidden');
+            } else {
+                // Скроллим вниз — скрываем navbar
+                navbar.classList.add('navbar-hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+
+        // --- ЛОГИКА ПЕРЕХОДА ПО ЯКОРЮ ---
+        document.querySelectorAll('.nav-link').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = btn.getAttribute('data-section');
+                closeMenu();
+                // Нужно подождать, пока меню реально скроется! У тебя transition 0.25s, значит задержка минимум 300мс!
+                setTimeout(() => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        const offset = 70; // если у тебя фиксированная шапка
+                        const elementPosition = section.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - offset;
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 400); // <-- поставь не меньше 300-350мс!
+            });
+        });
+    });
+</script>
+
+<script>//ПЕРВЫЙ ГОТОВО!!! ТЕЛЕФОНЫ
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("phones-list");
+    if (!container) return;
+
+    const phoneItems = Array.from(container.querySelectorAll(".phone-item"));
+
+    // алгоритм Фишера — Йетса
+    for (let i = phoneItems.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [phoneItems[i], phoneItems[j]] = [phoneItems[j], phoneItems[i]];
+    }
+
+    container.innerHTML = "";
+    phoneItems.forEach(item => container.appendChild(item));
+});
+
+</script>
+
+
+<script>//ВТОРОЙ ГОТОВ !!!!!! ПЛАВНАЯ ПРОКРУТКА(ПОЯВЛЕНИЕ)
+    document.addEventListener('DOMContentLoaded', () => {
+        const faders = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target); // Анимация только один раз
+                }
+            });
+        }, { threshold: 0.1 });
+
+        faders.forEach(fader => observer.observe(fader));
+    });
+</script>
+
+<script>//ТРЕТЬЯ ГОТОВО!!! МЕТКА ЯНДЕКС КАРТЫ
+    // Яндекс карта
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('yandex-map', {
+            center: [53.199250, 50.259752],
+            zoom: 15
+        });
+        var myPlacemark = new ymaps.Placemark([53.199250, 50.259752], {
+            balloonContent: 'Наша компания'
+        });
+        myMap.geoObjects.add(myPlacemark);
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modals = document.querySelectorAll('.modal');
+        const body = document.body;
+
+        // Функция открытия модалки
+        function openModal(modal) {
+            modal.style.display = 'block';
+            body.style.overflow = 'hidden'; // блокируем скролл страницы
+        }
+
+        // Функция закрытия модалки
+        function closeModal(modal) {
+            modal.style.display = 'none';
+            body.style.overflow = ''; // возвращаем скролл страницы
+        }
+
+        // Назначаем обработчики для каждой модалки
+        modals.forEach(modal => {
+            // Закрытие крестиком
+            const closeBtn = modal.querySelector('.close');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => closeModal(modal));
+            }
+
+            // Закрытие кликом по фону (по самой модалке, но не по контенту)
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal(modal);
+                }
+            });
+        });
+
+        // Назначаем кнопки открытия модалок
+        document.querySelectorAll('.product-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modalId = btn.getAttribute('onclick') // извлекаем ID из onclick
+                    .match(/openModal\('(.+?)'\)/)[1];
+                const modal = document.getElementById(modalId);
+                if (modal) openModal(modal);
+            });
+        });
+    });
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("boxCalcForm");
+        const resultDiv = document.getElementById("calcResult");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            resultDiv.textContent = "";
+
+            // Получаем значения
+            const length = parseFloat(document.getElementById("length").value);
+            const width = parseFloat(document.getElementById("width").value);
+            const height = parseFloat(document.getElementById("height").value);
+            const quantity = parseInt(document.getElementById("quantity").value);
+
+            // Проверка корректности
+            if (!length || !width || !height || !quantity || quantity < 500) {
+                resultDiv.innerHTML = '<span style="color:red">Пожалуйста, заполните все поля корректными данными (количество ≥ 500).</span>';
+                return;
+            }
+
+            // --- Расчет по логике Java ---
+            let Dz = (width + length) * 2 + 80;
+            let Shz = width + height + 8;
+            let multiplier = 1;
+
+            if (Dz > 1650) {
+                Dz = width + length + 80;
+                Shz = width + height;
+                multiplier = 2;
+            }
+
+            if (Shz < 350 || Shz > 850 || Dz < 800) {
+                resultDiv.innerHTML = '<span style="color:red">Размеры заготовки не являются стандартными. Обратитесь к специалистам.</span>';
+                return;
+            }
+
+            const rollWidths = [1050, 1200, 1400];
+            let bestFitCount = 0;
+            let bestRollWidth = 0;
+            let bestWaste = -1; // как в Java
+
+            for (let rollWidth of rollWidths) {
+                const usableWidth = rollWidth - 40;
+                const fitCount = Math.floor(usableWidth / Shz);
+                const waste = usableWidth - fitCount * Shz;
+
+                if (fitCount > 0 && (fitCount > bestFitCount || (fitCount === bestFitCount && waste < bestWaste || bestWaste === -1))) {
+                    bestFitCount = fitCount;
+                    bestRollWidth = rollWidth;
+                    bestWaste = waste;
+                }
+            }
+
+            if (bestFitCount === 0) {
+                resultDiv.innerHTML = '<span style="color:red">Ошибка системы. Попробуйте позже.</span>';
+                return;
+            }
+
+            const boxesPerRow = bestFitCount;
+            const rowsNeeded = Math.ceil(quantity / boxesPerRow);
+            const usedArea = rowsNeeded * bestRollWidth * Dz * multiplier / 1_000_000;
+
+            const costPerM2 = 32;
+            let totalCost = usedArea * costPerM2;
+            if (multiplier === 2) totalCost *= 2;
+
+            resultDiv.innerHTML = `<span style="color:green; font-weight:bold;">Предварительная стоимость: ${totalCost.toFixed(2)} руб.</span>`;
+        });
+    });
+</script>
+
+
+</body>
+</html>
